@@ -1,0 +1,82 @@
+<!-- 4.) Listen for a click on div_1 through div_5 and each time something is clicked update the last_clicked element with the content from the div that was clicked, and take the old last clicked to update the previously_clicked<!DOCTYPE html> -->
+s
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Exercise2</title>
+   
+  <script>
+    window.onload = function(event) {
+      var divOne = document.getElementById("div_1");
+      var divTwo = document.getElementById("div_2");
+      var divThree = document.getElementById("div_3");
+      var divFour = document.getElementById("div_4");
+      var divFive = document.getElementById("div_5");
+      
+      var lastClick = document.getElementById("lastClicked");
+      var prevClick = document.getElementById('previouslyClicked');
+
+  
+      var count = 0;
+      divOne.onclick = function(event) {
+        count++;
+        prevClick.innerHTML = lastClick.innerHTML;  
+        lastClick.innerHTML = divOne.innerHTML;
+      alert("This has been clicked!" + count);
+    }
+
+      divTwo.onclick = function(event) {
+        console.log(divOne.innerHTML);
+        count++;
+        prevClick.innerHTML = lastClick.innerHTML;
+        lastClick.innerHTML = divOne.innerHTML;
+        alert("This has been clicked!" + count);
+
+        }
+         divThree.onclick = function(event) {
+        //console.log(divOne.innerHTML);
+        count++;
+        alert("This has been clicked!" + count);
+        }
+         divFour.onclick = function(event) {
+        //console.log(divOne.innerHTML); {
+        //console.log(divOne.innerHTML);
+        count++;
+        alert("This has been clicked!" + count);
+      //console.log("THE SECOND ONE!!!",divOne.innerHTML)
+      }
+       divFive.onclick = function(event) {
+        //console.log(divOne.innerHTML);
+        count++;
+        alert("This has been clicked!" + count);
+      }
+    }
+</script>
+</head>
+<body>
+  <div id="previouslyClicked">
+  none
+  </div>
+  <div id= "lastClicked">
+  none
+  </div>
+  <div id="div_1"> 
+   1
+  </div>
+  <div id="div_2">
+   2
+  </div>
+  <div id="div_3">
+   3
+  </div>
+  <div id="div_4">
+   4
+  </div>
+  <div id="div_5">
+   5
+  </div>
+
+</body>
+</html>
+
+<!--  -->
